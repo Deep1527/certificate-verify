@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Certificate Verification</title>
+</head>
+<body>
+  <p>Redirecting to certificate verification...</p>
+
+  <script>
+    const scriptUrl = "https://script.google.com/macros/s/AKfycbzo0OcpOzTHy7hQ7eTEpT6IuHHFuU1L5UGeY2c8I1nJILNJLCMf0nQuGScdaotd9Nrb/exec";
+    const reg = new URLSearchParams(window.location.search).get("reg");
+
+    if (reg) {
+      window.location.href = scriptUrl + "?reg=" + encodeURIComponent(reg);
+    } else {
+      window.location.href = scriptUrl;
+    }
+  </script>
+</body>
+</html>
